@@ -1,6 +1,8 @@
-from src.rock_paper_scissors import RockPaperScissors
+import argparse
+from rock_paper_scissors import RockPaperScissors
+from gui_game import main as gui_main
 
-def main():
+def cli_main():
     game = RockPaperScissors()
     print("Welcome to Rock, Paper, Scissors!")
     print("Enter 'quit' to exit the game.")
@@ -26,6 +28,16 @@ def main():
             
         except ValueError as e:
             print(f"\nError: {e}")
+
+def main():
+    parser = argparse.ArgumentParser(description='Rock Paper Scissors Game')
+    parser.add_argument('--cli', action='store_true', help='Run in command-line interface mode')
+    args = parser.parse_args()
+    
+    if args.cli:
+        cli_main()
+    else:
+        gui_main()
 
 if __name__ == "__main__":
     main()
