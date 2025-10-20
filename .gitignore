@@ -1,0 +1,41 @@
+# Python virtual environment
+.venv/
+venv/
+ENV/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment variables
+.env
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Assets (if they should be downloaded separately)
+# Uncomment the following lines if you don't want to include the game images in the repository
+# assets/*.png
+# assets/*.jpg
+# assets/*.gif
